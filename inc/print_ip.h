@@ -2,6 +2,7 @@
 
 #include <array>
 #include <iostream>
+#include <limits>
 #include <list>
 #include <string>
 #include <tuple>
