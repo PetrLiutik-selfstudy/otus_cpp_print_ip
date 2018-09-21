@@ -37,7 +37,23 @@ int main()
 
   long long ip8{8875824491850138409};
 
-  print_ip<long long, false>(std::cout, ip8);
+  print_ip<decltype(ip8), false>(std::cout, ip8);
+  std::cout << std::endl;
+
+  std::string ip9{"192.168.1.1"};
+  print_ip(std::cout, ip9);
+  std::cout << std::endl;
+
+  std::vector<uint8_t> ip10{1, 2, 3, 4};
+  print_ip(std::cout, ip10);
+  std::cout << std::endl;
+
+  std::list<uint8_t> ip11{4, 3, 2, 1};
+  print_ip(std::cout, ip11);
+  std::cout << std::endl;
+
+  std::list<int> ip12{2130706433, 3, 2, 1};
+  print_ip(std::cout, ip12);
   std::cout << std::endl;
 
   return 0;

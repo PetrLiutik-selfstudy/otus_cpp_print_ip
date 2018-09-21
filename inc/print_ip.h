@@ -1,9 +1,11 @@
 #pragma once
 
-#include <iostream>
-#include <vector>
-#include <tuple>
 #include <array>
+#include <iostream>
+#include <list>
+#include <string>
+#include <tuple>
+#include <vector>
 
 /**
  * @brief Определение порядка байт (считаем, что порядок PDP-11 не используется).
@@ -38,7 +40,32 @@ print_ip(std::ostream& os, const T& value) {
   }
 };
 
+/**
+ * @brief Вывод ip-адреса представленного в виде строки std::string.
+ * @tparam T - тип std::string.
+ * @param os - поток для вывода.
+ * @param value - значение ip-адреса в виде строки.
+ */
+template<typename T>
+typename std::enable_if_t<std::is_same<T, std::string>::value, void>
+print_ip(std::ostream &os, const T &value) {
+  os << value;
+}
 
-
-
+/**
+ * @brief Вывод ip-адреса представленного в виде std::vector или std::list.
+ * @tparam T - тип std::vector или std::list.
+ * @param os - поток для вывода.
+ * @param value - значение ip-адреса в виде строки.
+ */
+template<typename T>
+typename std::enable_if_t<std::is_same<T, std::vector<typename T::value_type>>::value ||
+  std::is_same<T, std::list<typename T::value_type>>::value, void>
+print_ip(std::ostream &os, const T &value) {
+  for(auto it = value.begin(); it != value.end();) {
+    print_ip(os, *it);
+    if(++it != value.end())
+      os << ".";
+  }
+}
 
