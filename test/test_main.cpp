@@ -1,22 +1,19 @@
 #include "gtest/gtest.h"
 //#include "../inc/print_ip.h"
-//#include "../inc/ver.h"
+#include "../inc/ver.h"
 
 //#include <sstream>
 
 TEST(ver_test_case, ver_major_test) {
-  //EXPECT_GE(ver_major(), 1);
-  EXPECT_EQ(1, 1);
+  EXPECT_GE(ver_major(), 1);
 }
 
 TEST(ver_test_case, ver_minor_test) {
-  //EXPECT_GE(ver_minor(), 1);
-  EXPECT_EQ(1, 1);
+  EXPECT_GE(ver_minor(), 1);
 }
 
 TEST(ver_test_case, ver_patch_test) {
-  //EXPECT_GE(ver_patch(), 1);
-  EXPECT_EQ(1, 1);
+  EXPECT_GE(ver_patch(), 1);
 }
 
 TEST(print_ip_test_case, print_ip_bool_test) {
