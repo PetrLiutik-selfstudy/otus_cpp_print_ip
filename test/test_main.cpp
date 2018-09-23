@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "../inc/ver.h"
+#include "../inc/print_ip.h"
 
 TEST(ver_test_case, ver_major_test) {
   EXPECT_GE(ver_major(), 1);
@@ -11,6 +12,16 @@ TEST(ver_test_case, ver_minor_test) {
 
 TEST(ver_test_case, ver_patch_test) {
   EXPECT_GE(ver_patch(), 1);
+}
+
+TEST(print_ip_test_case, print_ip_bool_test) {
+  std::stringstream ss;
+
+  print_ip(ss, false);
+  EXPECT_EQ(ss.str(), "0");
+
+  print_ip(ss, true);
+  EXPECT_EQ(ss.str(), "1");
 }
 
 int main(int argc, char *argv[]) {
