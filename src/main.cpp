@@ -56,5 +56,22 @@ int main()
   print_ip(std::cout, ip12);
   std::cout << std::endl;
 
+
+  std::vector<std::string> ip13{"192","168","1","1"};
+  print_ip(std::cout, ip13);
+  std::cout << std::endl;
+
+  std::list<std::string> ip14{"192","168","1","1"};
+  print_ip(std::cout, ip14);
+  std::cout << std::endl;
+
+  std::tuple<uint8_t, uint8_t, uint8_t, std::string, std::vector<uint8_t>> ip15{192, 168, 1, "1", {1, 2, 3}};
+  print_ip(std::cout, ip15);
+  std::cout << std::endl;
+
+  bool ip16 = true;
+  print_ip(std::cout, ip16);
+  std::cout << std::endl;
+
   return 0;
 }
