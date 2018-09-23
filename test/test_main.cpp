@@ -21,7 +21,7 @@ std::string get_ip_string(const T &value) {
   std::stringstream ss;
   std::string str;
   print_ip(ss, value);
-  ss >> result;
+  ss >> str;
   return str;
 }
 
