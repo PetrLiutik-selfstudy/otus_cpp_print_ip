@@ -42,11 +42,15 @@ TEST(print_ip_test_case, print_ip_int_test) {
 
   char ip3{-1};
   std::string ip3_str{"255"};
-  EXPECT_EQ(get_ip_string(ip4), ip4_str);
+  EXPECT_EQ(get_ip_string(ip3), ip3_str);
 
   uint8_t ip4{11};
   std::string ip4_str{"11"};
   EXPECT_EQ(get_ip_string(ip4), ip4_str);
+  
+  int16_t ip5{-1111};
+  std::string ip5_str{"251.169"};
+  EXPECT_EQ(get_ip_string(ip5), ip5_str);
 }
 
 TEST(print_ip_test_case, print_ip_vector_test) {
