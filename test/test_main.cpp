@@ -16,41 +16,22 @@ TEST(ver_test_case, ver_patch_test) {
   EXPECT_GE(ver_patch(), 1);
 }
 
+template<typename T>
+std::string get_ip_string(const T &value) {
+  std::stringstream ss;
+  std::string str;
+  print_ip(ss, value);
+  ss >> result;
+  return str;
+}
+
 TEST(print_ip_test_case, print_ip_bool_test) {
-  std::stringstream ss;
-  
   bool ip{true};
-  print_ip(ss, ip);
-  EXPECT_EQ(ss.str(), "1");
+  std::string ip_str{"1"};
 
-  ip = false;
-  print_ip(ss, ip);
-  EXPECT_EQ(ss.str(), "0");
+  EXPECT_EQ(get_ip_string(ip), ip_str);
 }
 
-TEST(print_ip_test_case, print_ip_char_test) {
-  std::stringstream ss;
-
-  char ip{-1};
-  print_ip(ss, ip);
-  EXPECT_EQ(ss.str(), "255");
-}
-
-TEST(print_ip_test_case, print_ip_uint8_test) {
-  std::stringstream ss;
-  
-  uint8_t ip{23};
-  print_ip(ss, ip);
-  EXPECT_EQ(ss.str(), "23");
-}
-
-TEST(print_ip_test_case, print_ip_short_test) {
-  std::stringstream ss;
-  
-  short ip{0};
-  print_ip(ss, ip);
-  EXPECT_EQ(ss.str(), "0.0");
-}
 
 int main(int argc, char *argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
