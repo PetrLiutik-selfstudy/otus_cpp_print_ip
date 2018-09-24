@@ -7,13 +7,14 @@
 
 var indexSectionsWithContent =
 {
-  0: "aimopv",
-  1: "p",
+  0: "ailmoptv",
+  1: "ip",
   2: "a",
   3: "mpv",
   4: "imopv",
-  5: "i",
-  6: "p"
+  5: "lv",
+  6: "it",
+  7: "p"
 };
 
 var indexSectionNames =
@@ -23,8 +24,9 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "typedefs",
-  6: "defines"
+  5: "variables",
+  6: "typedefs",
+  7: "defines"
 };
 
 function convertToId(search)

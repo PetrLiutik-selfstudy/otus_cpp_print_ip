@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -97,6 +97,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanonymous__namespace_02print__ip_8h_03_1_1print__ip__elem_3_010_00_01Args_8_8_8_4.html">print_ip_elem&lt; 0, Args...&gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хелпер для разворачивания ip-адреса в формате std::tuple и печати его последнего элемента.  <a href="structanonymous__namespace_02print__ip_8h_03_1_1print__ip__elem_3_010_00_01Args_8_8_8_4.html#details">Подробнее...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanonymous__namespace_02print__ip_8h_03_1_1is__same__elems.html">is_same_elems</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanonymous__namespace_02print__ip_8h_03_1_1is__same__elems_3_010_00_01Args_8_8_8_4.html">is_same_elems&lt; 0, Args...&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanonymous__namespace_02print__ip_8h_03_1_1is__same__tuple__elems.html">is_same_tuple_elems</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хелпер для проверки кортежа на содержание элементов одинакового типа.  <a href="structanonymous__namespace_02print__ip_8h_03_1_1is__same__tuple__elems.html#details">Подробнее...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -133,10 +140,12 @@ void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" 
 void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02print__ip_8h_03.html#a5607df7d5e3bcf6051eaebe5551ebb9f">print_ip</a> (std::ostream &amp;os, const T &amp;value)</td></tr>
 <tr class="memdesc:a5607df7d5e3bcf6051eaebe5551ebb9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод ip-адреса представленного в виде std::vector или std::list.  <a href="#a5607df7d5e3bcf6051eaebe5551ebb9f">Подробнее...</a><br/></td></tr>
 <tr class="separator:a5607df7d5e3bcf6051eaebe5551ebb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1269ead164621e8ae808cb0ebd223e3"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ae1269ead164621e8ae808cb0ebd223e3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02print__ip_8h_03.html#ae1269ead164621e8ae808cb0ebd223e3">print_ip</a> (std::ostream &amp;os, const std::tuple&lt; Args...&gt; &amp;tuple)</td></tr>
-<tr class="memdesc:ae1269ead164621e8ae808cb0ebd223e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод ip-адреса представленного в виде std::tuple.  <a href="#ae1269ead164621e8ae808cb0ebd223e3">Подробнее...</a><br/></td></tr>
-<tr class="separator:ae1269ead164621e8ae808cb0ebd223e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e11d3a9b842e4cd9d53259a77d3844"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a18e11d3a9b842e4cd9d53259a77d3844"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t<br class="typebreak"/>
+&lt; <a class="el" href="structanonymous__namespace_02print__ip_8h_03_1_1is__same__tuple__elems.html">is_same_tuple_elems</a>&lt; Args...&gt;<br class="typebreak"/>
+::value, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02print__ip_8h_03.html#a18e11d3a9b842e4cd9d53259a77d3844">print_ip</a> (std::ostream &amp;os, const std::tuple&lt; Args...&gt; &amp;tuple)</td></tr>
+<tr class="memdesc:a18e11d3a9b842e4cd9d53259a77d3844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод ip-адреса представленного в виде std::tuple.  <a href="#a18e11d3a9b842e4cd9d53259a77d3844">Подробнее...</a><br/></td></tr>
+<tr class="separator:a18e11d3a9b842e4cd9d53259a77d3844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a class="anchor" id="a92813bb4046a036ca0569b558fcedde6"></a>
@@ -331,14 +340,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ae1269ead164621e8ae808cb0ebd223e3"></a>
+<a class="anchor" id="a18e11d3a9b842e4cd9d53259a77d3844"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void anonymous_namespace{print_ip.h}::print_ip </td>
+          <td class="memname">std::enable_if_t&lt;<a class="el" href="structanonymous__namespace_02print__ip_8h_03_1_1is__same__tuple__elems.html">is_same_tuple_elems</a>&lt;Args...&gt;::value, void&gt; anonymous_namespace{print_ip.h}::print_ip </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>os</em>, </td>
