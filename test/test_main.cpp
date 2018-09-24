@@ -82,8 +82,8 @@ TEST(print_ip_test_case, print_ip_list_test) {
 }
 
 TEST(print_ip_test_case, print_ip_tuple_test) {
-  std::tuple<uint8_t, std::string, std::vector<uint16_t>, uint32_t> ip{1, "2.3", {4, 5}, 111111111};
-  std::string ip_str{"1.2.3.0.4.0.5.6.159.107.199"};
+  std::tuple<uint32_t, uint32_t, uint32_t, uint32_t> ip{1, 2, 3, 4};
+  std::string ip_str{"0.0.0.1.0.0.0.2.0.0.0.3.0.0.0.4"};
   EXPECT_EQ(get_ip_string(ip), ip_str);
 }
 

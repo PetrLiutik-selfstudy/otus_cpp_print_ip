@@ -109,6 +109,29 @@ struct print_ip_elem<0, Args...> {
   }
 };
 
+
+template<size_t ind, typename... Args>
+struct is_same_elems {
+  using type = typename std::tuple_element<ind, std::tuple<Args...> >::type;
+  static constexpr bool value{std::is_same<type, typename is_same_elems<ind - 1, Args...>::type>::value
+                              && is_same_elems<ind - 1, Args...>::value};
+};
+
+template<typename... Args>
+struct is_same_elems<0, Args...> {
+  using type = typename std::tuple_element<0, std::tuple<Args...> >::type;
+  static constexpr bool value{true};
+};
+
+/**
+ * @brief Хелпер для проверки кортежа на содержание элементов одинакового типа.
+ */
+template<typename... Args>
+struct is_same_tuple_elems {
+  static constexpr size_t len{std::tuple_size<std::tuple<Args...>>::value};
+  static constexpr bool value{is_same_elems<len - 1, Args...>::value};
+};
+
 /**
  * @brief Вывод ip-адреса представленного в виде std::tuple.
  * @tparam Args - элементы кортежа.
@@ -116,7 +139,8 @@ struct print_ip_elem<0, Args...> {
  * @param tuple - кортеж.
  */
 template<typename... Args>
-void print_ip(std::ostream &os, const std::tuple<Args...>& tuple) {
+typename std::enable_if_t<is_same_tuple_elems<Args...>::value, void>
+print_ip(std::ostream &os, const std::tuple<Args...>& tuple) {
   const auto len = std::tuple_size<std::tuple<Args...>>::value;
   print_ip_elem<len - 1, Args...>{}(os, tuple);
 }

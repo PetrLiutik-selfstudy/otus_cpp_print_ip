@@ -38,7 +38,7 @@ int main()
   print_ip(std::cout, ip7);
   std::cout << std::endl;
 
-  std::tuple<uint8_t, std::string, std::vector<uint8_t>> ip8{213, "180", {204, 1}};
+  std::tuple<char, char, char, char> ip8{213, 180, 204, 1};
   print_ip(std::cout, ip8);
   std::cout << std::endl;
 
