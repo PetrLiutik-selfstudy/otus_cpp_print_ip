@@ -7,18 +7,24 @@
 
 var indexSectionsWithContent =
 {
-  0: "mpv",
-  1: "mv",
-  2: "mv",
-  3: "p"
+  0: "aimopv",
+  1: "p",
+  2: "a",
+  3: "mpv",
+  4: "imopv",
+  5: "i",
+  6: "p"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "defines"
+  1: "classes",
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "typedefs",
+  6: "defines"
 };
 
 function convertToId(search)

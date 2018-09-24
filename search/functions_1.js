@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['ver_5fmajor',['ver_major',['../ver_8cpp.html#aba4335b56d75cb94866c39a4378c00b8',1,'ver.cpp']]],
-  ['ver_5fminor',['ver_minor',['../ver_8cpp.html#ad800fb2a67179bf696cbc5a6e1f297cb',1,'ver.cpp']]],
-  ['ver_5fpatch',['ver_patch',['../ver_8cpp.html#af5a202cd1e165e806e2ef6a5c921e964',1,'ver.cpp']]]
+  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]]
 ];
