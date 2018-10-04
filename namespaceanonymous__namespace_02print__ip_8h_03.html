@@ -134,6 +134,10 @@ void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class
 void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02print__ip_8h_03.html#a8a7876ad3d24ab59c1183aadb635bf13">print_ip</a> (std::ostream &amp;os, const T &amp;value)</td></tr>
 <tr class="memdesc:a8a7876ad3d24ab59c1183aadb635bf13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод ip-адреса представленного в виде строки std::string.  <a href="#a8a7876ad3d24ab59c1183aadb635bf13">Подробнее...</a><br/></td></tr>
 <tr class="separator:a8a7876ad3d24ab59c1183aadb635bf13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a294bf90543d21f513e333eaac393279e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a294bf90543d21f513e333eaac393279e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02print__ip_8h_03.html#a294bf90543d21f513e333eaac393279e">to_unsigned</a> (const T &amp;t)</td></tr>
+<tr class="memdesc:a294bf90543d21f513e333eaac393279e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразование интегрального типа в беззнаковый.  <a href="#a294bf90543d21f513e333eaac393279e">Подробнее...</a><br/></td></tr>
+<tr class="separator:a294bf90543d21f513e333eaac393279e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5607df7d5e3bcf6051eaebe5551ebb9f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5607df7d5e3bcf6051eaebe5551ebb9f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="namespaceanonymous__namespace_02print__ip_8h_03.html#a9e8b7e81d32fbd1345d15c8cc752d674">is_vector</a>&lt; T &gt;<br class="typebreak"/>
 ::value||<a class="el" href="namespaceanonymous__namespace_02print__ip_8h_03.html#a92813bb4046a036ca0569b558fcedde6">is_list</a>&lt; T &gt;::value, <br class="typebreak"/>
@@ -377,6 +381,32 @@ template&lt;typename... Args&gt; </div>
   <table class="params">
     <tr><td class="paramname">os</td><td>- поток для вывода. </td></tr>
     <tr><td class="paramname">tuple</td><td>- кортеж. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a294bf90543d21f513e333eaac393279e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto anonymous_namespace{print_ip.h}::to_unsigned </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преобразование интегрального типа в беззнаковый. </p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>- любой интегральный тип. </td></tr>
   </table>
   </dd>
 </dl>
