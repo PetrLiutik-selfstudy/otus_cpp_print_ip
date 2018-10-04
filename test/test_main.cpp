@@ -67,7 +67,7 @@ TEST(print_ip_test_case, print_ip_vector_test) {
   EXPECT_EQ(get_ip_string(ip1), ip1_str);
 
   std::vector<uint32_t> ip2{11111111, 22222222, 33333333, 44444444};
-  std::string ip2_str{"0.169.138.199.1.83.21.142.1.252.160.85.2.166.43.28"};
+  std::string ip2_str{"11111111.22222222.33333333.44444444"};
   EXPECT_EQ(get_ip_string(ip2), ip2_str);
 }
 
@@ -77,13 +77,13 @@ TEST(print_ip_test_case, print_ip_list_test) {
   EXPECT_EQ(get_ip_string(ip1), ip1_str);
 
   std::list<uint32_t> ip2{11111111, 22222222, 33333333, 44444444};
-  std::string ip2_str{"0.169.138.199.1.83.21.142.1.252.160.85.2.166.43.28"};
+  std::string ip2_str{"11111111.22222222.33333333.44444444"};
   EXPECT_EQ(get_ip_string(ip2), ip2_str);
 }
 
 TEST(print_ip_test_case, print_ip_tuple_test) {
-  std::tuple<uint32_t, uint32_t, uint32_t, uint32_t> ip{1, 2, 3, 4};
-  std::string ip_str{"0.0.0.1.0.0.0.2.0.0.0.3.0.0.0.4"};
+  std::tuple<uint32_t, uint32_t, uint32_t, uint32_t> ip{11111111, 22222222, 33333333, 44444444};
+  std::string ip_str{"11111111.22222222.33333333.44444444"};
   EXPECT_EQ(get_ip_string(ip), ip_str);
 }
 

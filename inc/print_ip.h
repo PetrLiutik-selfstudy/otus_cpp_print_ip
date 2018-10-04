@@ -72,6 +72,15 @@ using is_list = std::is_same<T, std::list<typename T::value_type,
                                           typename T::allocator_type>>;
 
 /**
+ * @brief Преобразование интегрального типа в беззнаковый.
+ * @tparam T - любой интегральный тип.
+ */
+template<typename T>
+auto to_unsigned(const T& t) {
+  return std::make_unsigned_t<T>(t);
+}
+
+/**
  * @brief Вывод ip-адреса представленного в виде std::vector или std::list.
  * @tparam T - тип std::vector или std::list.
  * @param os - поток для вывода.
@@ -81,7 +90,7 @@ template<typename T>
 typename std::enable_if_t<is_vector<T>::value || is_list<T>::value, void>
 print_ip(std::ostream &os, const T &value) {
   for(auto it = value.begin(); it != value.end();) {
-    print_ip(os, *it);
+    os << +(to_unsigned(*it));
     if(++it != value.end())
       os << ".";
   }
@@ -94,8 +103,7 @@ template<int ind, typename... Args>
 struct print_ip_elem {
   void operator()(std::ostream &os, const std::tuple<Args...>& tuple) {
     print_ip_elem<ind - 1, Args...>{}(os, tuple);
-    os << ".";
-    print_ip(os, std::get<ind>(tuple));
+    os << "." << +(to_unsigned(std::get<ind>(tuple)));
   }
 };
 
@@ -105,7 +113,7 @@ struct print_ip_elem {
 template<typename... Args>
 struct print_ip_elem<0, Args...> {
   void operator()(std::ostream &os, const std::tuple<Args...>& tuple) {
-    print_ip(os, std::get<0>(tuple));
+    os << +(to_unsigned(std::get<0>(tuple)));
   }
 };
 
